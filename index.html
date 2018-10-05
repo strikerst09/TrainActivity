@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Activity</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid" id="jumbo">
+        <h1 class="display-1">Anytime is Train Time.</h1>
+        <h5>Choo Choo! Chooooo Chooooooo!</h5>
+    </div>
+    <br>
+    <div class="card currSchedBox">
+        <div class="card-body">
+            <h5 class="card-title">Current Train Schedule</h5>
+            <table class="table" id="tSched">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Next Arrival (00:00)</th>
+                        <th scope="col">Frequency (min)</th>
+                        <th scope="col">Minutes Away</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <br>
+    <form>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Add Train</h5>
+                <div class="form-group">
+                    <label for="TrainName">Train Name</label>
+                    <input class="form-control form-control-sm" type="text" placeholder="Thomas the Train Engine" id="trainName">
+                </div>
+                <div class="form-group">
+                    <label for="Destination">Destination</label>
+                    <input class="form-control form-control-sm" type="text" placeholder="Tahiti" id="tDest">
+                </div>
+                <div class="form-group">
+                    <label for="First Train Time">First Train Time (HHamm - Military Time)</label>
+                    <input class="form-control form-control-sm" type="time" placeholder="0800" id="tTime">
+                </div>
+                <div class="form-group">
+                    <label for="Frequency">Frequency (min)</label>
+                    <input class="form-control form-control-sm" type="text" placeholder="30" id="frequency">
+                </div>
+                <button class="btn btn-primary" id="submitBtn">Submit</button>
+            </div>
+        </div>
+    </form>
+    <script src="javascript/javascript.js"></script>
+</body>
+
+</html>
