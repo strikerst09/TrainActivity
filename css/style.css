@@ -1,7 +1,19 @@
 body {
+    background-image: url("../images/trains.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 #jumbo {
     text-align: center;
 }
+.display-1 {
+    color: rgb(10, 10, 77);
+}
 .currSchedBox {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#addSection {
+    margin-left: 10%;
+    margin-right: 10%;
 }
